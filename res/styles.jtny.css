@@ -9,110 +9,11 @@ body div#wrapper_menu{position:fixed !important;top:0 !important;right:0 !import
 body div#wrapper_foot.wrap_menu{position:fixed !important;float:none !important;left:0 !important;bottom:0;padding:9px 0;width:100% !important;height:22px !important;background-color:#29166f;z-index:99999;}
 
 
-/*HEADER  -  TEAM*/
-div.headerteam {
-    text-align: center;
-    //background-color: #f9ac81;
-    width: 100%;
-    background-image:url(bg.pattern.jpg);
-    background-repeat:no-repeat;
-    background-position: center;
-}
-
-
-.resumescreening {
-    text-align:center;
-    background-color: #e8e0f0;
-    width:100%;
-}
-
-.headbutton {
-    width: auto;
-    height: auto;
-    background-color: #29166f;
-    border-radius: 10px;
-    padding: 15px;
-    color: white;
-    margin-bottom: 15px;
-}
 
 /* Placeholder - content not yet available */
 .placeholder{color:#999 !important;text-decoration:line-through !important;}
 a.placeholder{cursor:not-allowed;}
 a.placeholder:hover{color:#666 !important;}
-
-
-
-.ccontainer {
-    width:800px;
-    margin:50px auto 0;
-    display:table;
-    box-sizing:border-box;
-}
-
-.rrow{
-    margin:0px 0;
-    border-left:0px solid #fff;
-    margin-bottom:30px;
-}
-
-.ccolumn {
-    /*background: #ccc;*/
-    display: table-cell;
-    padding: 10px;
-    width: 25.33333%;
-    text-align: center;
-    color: black;
-    vertical-align: middle;
-    border-top: 2px solid #29166f;
-    border-bottom: 2px solid #29166f;
-    border-left: 2px solid #29166f;
-    border-right: 2px solid #29166f;
-    border-radius:30px;
-}
-.ccolumn1 {
-    background: #f6f7f6;
-    display: table-cell;
-    padding: 10px;
-    width: 10.33333%;
-    text-align: center;
-    color: black;
-    vertical-align: middle;
-}
-
-
-
-.rrow:nth-child(1) .ccolumn:nth-child(1) {
-    background: #f6f7f6;
-}
-
-.rrow:nth-child(1) .ccolumn:nth-child(2) {
-    background: #f6f7f6;
-}
-
-.rrow:nth-child(1) .ccolumn:nth-child(3) {
-    background: #f6f7f6;
-}
-
-@media(max-width:900px) {
-
-    .ccontainer{
-        margin:0;
-        padding:10px;
-        width:100%;
-    }
-    .ccolumn {
-    width:100%;
-    display:block;
-    margin:10px 0;
-    border:1px solid #29166f;
-    border-radius:30px;
-    box-sizing:border-box;
-    }
-    .rrow{
-        margin:0;
-    }
-}
 
 
 
@@ -213,7 +114,7 @@ div#content_wrap p.less{margin-bottom:0 !important;}
 
 div#content_wrap h4.heading{margin:0 !important;font-weight:normal !important;}
 div#content_wrap span.subheading{border-bottom:1px solid;}
-div#content_wrap span.titler{font-weight:bold;color:#29166f;}
+div#content_wrap span.titler{font-weight:bold;color:#009431;}
 div#content_wrap span.subtitler{padding-left:8px;font-weight:bold;color:#b2b3b3;}
 div#content_wrap span.subtitler.nopad{padding-left:0 !important;}
 
@@ -256,7 +157,7 @@ div#pgmenu_wrap ul#pgmenu{margin-left:0 !important;width:100%;}
 div#pgmenu_wrap ul#pgmenu li{padding-right:8px;float:left;clear:right !important;width:auto;height:100% !important;font-size:1.2em;font-weight:bold;overflow:hidden !important;}
 ul#pgmenu li a{position:relative !important;border-bottom:0 none !important;color:#b2b3b3;text-transform:capitalize;white-space:pre-wrap;}
 ul#pgmenu li a:hover,
-div#pgmenu_wrap ul#pgmenu li.active a{color:#3d3d3d;border-bottom:2px solid #29166f !important;}
+div#pgmenu_wrap ul#pgmenu li.active a{color:#3d3d3d;border-bottom:2px solid #009431 !important;}
 
 div#pgmenu_wrap ul#pgmenu li div.submenu_items{display:none;position:fixed !important;float:left;left:8%;width:90%;height:100px;background:#fff !important;overflow:hidden !important;}
 ul#pgmenu li div.submenu_items a.spread{padding-top:34px !important;float:left;clear:right !important;width:130px !important;height:66px;background:#fff center center no-repeat;font-size:0.9em !important;color:#29166f !important;text-align:center;line-height:20px;border:0 none !important;}
@@ -303,7 +204,7 @@ ul#slide_contents li h4{font-size:1.3em;}
 span.underline,
 ul#slide_contents li h5 span.underline,
 ul#slide_contents li h4 span.underline,
-ul#slide_contents li h3 span.underline{border-bottom:2px solid #29166f;
+ul#slide_contents li h3 span.underline{border-bottom:2px solid #009431;
 	/*-webkit-transition:border 1200ms;
 	-moz-transition:border 1200ms;
 	-ms-transition:border 1200ms;
@@ -403,6 +304,4 @@ div#mdl_Download table.seamless div#msgBox{display:none !important;}
 
 	/* div#content_wrap ul.listed_icons li{background-position:0 center !important;background-size:75% auto !important;} */
 }
-
-
 
