@@ -225,6 +225,7 @@ div#content_wrap li>ul, div#content_wrap li>ul>li{margin-left:0 !important;}
 
 div#content_wrap ul.listed{margin:0 0 0 12px !important;padding-bottom:40px;list-style:disc;list-style-type:disc !important;}
 div#content_wrap ul.listed li{display:list-item !important;clear:both !important;margin:0 0 0 8px !important;list-style-type:disc;}
+div#content_wrap ul.listed ul.listed{padding-bottom:0 !important;margin-top:4px !important;}
 
 div#content_wrap ul.listed_icons{margin:12px 0 0 12px !important;}
 div#content_wrap ul.listed_icons li{margin:0 60px 40px 0;padding-bottom:30px;background-position:center center;background-repeat:no-repeat !important;}
