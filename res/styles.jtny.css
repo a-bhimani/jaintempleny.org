@@ -193,6 +193,12 @@ div#content_wrap ul#slide_contents>li.active{display:block !important;}
 ul#slide_contents li h5, ul#slide_contents li h5.quattro{max-width:650px;margin-bottom:0.7em;}
 ul#slide_contents li p.head{padding:4% 0 40px 0;font-size:2em !important;font-weight:bold !important;}
 ul#slide_contents li p.summary{margin-bottom:30px;font-size:1.2em !important;color:#787676;line-height:1.3 !important;}
+
+/* Color utility classes */
+.color-purple{color:#29166f !important;}
+.color-red{color:#db2015 !important;}
+.color-green{color:#009431 !important;}
+.color-yellow{color:#ffce00 !important;}
 ul#slide_contents li p.hline{max-width:650px;border-top:1px solid #c8c6c6;}
 ul#slide_contents li p img{border:0 none !important;}
 ul#slide_contents li p a.link_to{display:none;}
@@ -212,7 +218,7 @@ ul#slide_contents li h3 span.underline{border-bottom:2px solid #009431;
 	transition:border 1200ms;*/
 }
 
-ul#slide_contents li p span.counter{font-weight:bold;color:#29166f;}
+ul#slide_contents li p span.counter{font-weight:bold;color:#009431;}
 ul#slide_contents li p span.counter span.ctr_preval{display:none;}
 ul#slide_contents.nojs li p span.counter span.ctr_rund{display:none !important;}
 ul#slide_contents.nojs li p span.counter span.ctr_preval{display:inline !important;}
