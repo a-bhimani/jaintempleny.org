@@ -13,7 +13,7 @@
 	Jain Temple of New York &mdash; Home
 </title><link rel="shortcut icon" type="image/svg+xml" href="res/jtny.favicon.svg" /><link rel="stylesheet" type="text/css" media="all" href="res/styles.jtny.css" />
 <style type="text/css" media="all">
-body{background-image:url('res/bg.slide-1.jpg');}
+body{background-image:url('res/home/bg.slide-1.jpg');}
 body div#wrapper_menu{z-index:10001;}
 div#content_pad{height:0 !important;}
 
@@ -62,20 +62,20 @@ canvas#cnv1{display:inline-block;vertical-align:baseline;float:none !important;m
             
 <div id="slideshow">
 <ul id="slide_contents" class="nojs">
-	<li id="1" class="active" data-mbg-img="bg.slide-1.jpg">
-		<p class="summary"><strong class="color-red">अहिंसा</strong> Ahimsa — Compassion for all living beings</p>
-		<p class="summary"><strong class="color-red">सत्य</strong> Satya — Speak truth with kindness</p>
-		<p class="summary"><strong class="color-green">अस्तेय</strong> Asteya — Take nothing that is not given</p>
-		<p class="summary"><strong class="color-green">ब्रह्मचर्य</strong> Brahmacharya — Purity of mind and conduct</p>
-		<p class="summary"><strong class="color-purple">अपरिग्रह</strong> Aparigraha — Detach from material desires</p>
+	<li id="1" class="active" data-mbg-img="home/bg.slide-1.jpg">
+		<p class="summary"><strong class="color-red">अहिंसा | Ahimsa</strong> — Compassion for all living beings</p>
+		<p class="summary"><strong class="color-red">सत्य | Satya</strong> — Speak truth with kindness</p>
+		<p class="summary"><strong class="color-green">अस्तेय | Asteya</strong> — Take nothing that is not given</p>
+		<p class="summary"><strong class="color-green">ब्रह्मचर्य | Brahmacharya</strong> — Purity of mind and conduct</p>
+		<p class="summary"><strong class="color-purple">अपरिग्रह | Aparigraha</strong> — Detach from material desires</p>
 		<div id="cnvFrame"><canvas id="cnv1" width="800" height="600"></canvas></div>
 	</li>
-	<li id="2" data-mbg-img="bg.slide-2.jpg">
-		<p class="summary"><strong class="color-red">णमो अरिहंताणं</strong> — I bow to the Arihantas</p>
-		<p class="summary"><strong class="color-red">णमो सिद्धाणं</strong> — I bow to the Siddhas</p>
-		<p class="summary"><strong class="color-green">णमो आयरियाणं</strong> — I bow to the Acharyas</p>
-		<p class="summary"><strong class="color-green">णमो उवज्झायाणं</strong> — I bow to the Upadhyayas</p>
-		<p class="summary"><strong class="color-purple">णमो लोए सव्व साहूणं</strong> — I bow to all the Sadhus</p>
+	<li id="2" data-mbg-img="home/bg.slide-2.jpg">
+		<p class="summary"><strong class="color-red">णमो अरिहंताणं | Namo Arihantanam</strong> — I bow to the Arihantas</p>
+		<p class="summary"><strong class="color-red">णमो सिद्धाणं | Namo Siddhanam</strong> — I bow to the Siddhas</p>
+		<p class="summary"><strong class="color-green">णमो आयरियाणं | Namo Ayariyanam</strong> — I bow to the Acharyas</p>
+		<p class="summary"><strong class="color-green">णमो उवज्झायाणं | Namo Uvajjhayanam</strong> — I bow to the Upadhyayas</p>
+		<p class="summary"><strong class="color-purple">णमो लोए सव्व साहूणं | Namo Loe Savva Sahunam</strong> — I bow to all the Sadhus</p>
 	</li>
 </ul>
 <li style="display:block !important;">
@@ -166,7 +166,7 @@ canvas#cnv1{display:inline-block;vertical-align:baseline;float:none !important;m
     </div>
     <script type="text/javascript" language="javascript" src="res/js.lib.jquery.min.js"></script>
     <script type="text/javascript" language="javascript">//<![CDATA[
-        var getIE = (window.getIE || {}); getIE = function () { var f = -1; if (navigator.appName == "Microsoft Internet Explorer") { var e = navigator.userAgent; var d = new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})"); f = (d.exec(e)) ? parseFloat(RegExp.$1) : f } f = parseInt(f); this.getVer = function () { return f }; this.checkVer = function (a) { if (f > 0 && f == a) { return true } return false }; this.lowVer = function (a) { if (f > 0 && f <= a) { return true } return false }; return f }; var isIE = new getIE(); var mdd_open = function (b) { window.location = b }; var mdd_popup = function (b) { window.open(b, "Untitled", "status=1, toolbar=0, location=0, menubar=0, resizable=0, width=" + screen.width + ", height=" + screen.height + ", scrollbars=1") }; var getParameterByName = function (a, c) { try { var d = (RegExp("[?&]" + a.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]") + "=([^&]*)").exec(c ? ("?" + c) : window.location.search)); return (d && decodeURIComponent(d[1].replace(/\+/g, " "))) } catch (b) { } }; var preload = function (b) { $(b).each(function () { (new Image()).src = "res/" + this }) }; var HAS_ONLOAD_HAPPENED = false; var addLoadEvent; window.onload = function () { HAS_ONLOAD_HAPPENED = true }; addLoadEvent = function (script, params, post) { if (typeof (script) == "function") { if (post) { var oldOnload = window.onload; window.onload = function () { if (oldOnload) { try { oldOnload(); script() } catch (ex) { } } else { window.onload = script } } } else { $(document).ready(function () { script() }) } } else { if (typeof (script) == "string") { var attachScript = function () { var head0 = document.getElementsByTagName("body")[0]; var elScript = document.createElement("script"); var isLoaded = false; elScript.type = "text/javascript"; elScript.language = "javascript"; elScript.src = ("res/scriptcalls." + script + ".pack.js"); params = (params ? params : null); if (params) { $(elScript).attr("id", ("jsAtt-" + script)).attr("data-params", params) } $(elScript).one("load", function () { isLoaded = true }); $(elScript).load(); while (!isLoaded) { if ($(elScript).prop("complete")) { isLoaded = true } } head0.appendChild(elScript) }; if (post) { addLoadEvent(function () { attachScript() }) } else { attachScript() } } else { try { eval(script) } catch (ex) { } } } if (HAS_ONLOAD_HAPPENED) { window.onload() } };
+        var getIE = (window.getIE || {}); getIE = function () { var f = -1; if (navigator.appName == "Microsoft Internet Explorer") { var e = navigator.userAgent; var d = new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})"); f = (d.exec(e)) ? parseFloat(RegExp.$1) : f } f = parseInt(f); this.getVer = function () { return f }; this.checkVer = function (a) { if (f > 0 && f == a) { return true } return false }; this.lowVer = function (a) { if (f > 0 && f <= a) { return true } return false }; return f }; var isIE = new getIE(); var mdd_open = function (b) { window.location = b }; var mdd_popup = function (b) { window.open(b, "Untitled", "status=1, toolbar=0, location=0, menubar=0, resizable=0, width=" + screen.width + ", height=" + screen.height + ", scrollbars=1") }; var getParameterByName = function (a, c) { try { var d = (RegExp("[?&]" + a.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]") + "=([^&]*)").exec(c ? ("?" + c) : window.location.search)); return (d && decodeURIComponent(d[1].replace(/\+/g, " "))) } catch (b) { } }; var preload = function (b) { $(b).each(function () { (new Image()).src = "res/" + this }) }; var HAS_ONLOAD_HAPPENED = false; var addLoadEvent; window.onload = function () { HAS_ONLOAD_HAPPENED = true }; addLoadEvent = function (script, params, post) { if (typeof (script) == "function") { if (post) { var oldOnload = window.onload; window.onload = function () { if (oldOnload) { try { oldOnload(); script() } catch (ex) { } } else { window.onload = script } } } else { $(document).ready(function () { script() }) } } else { if (typeof (script) == "string") { var attachScript = function () { var head0 = document.getElementsByTagName("body")[0]; var elScript = document.createElement("script"); var isLoaded = false; elScript.type = "text/javascript"; elScript.language = "javascript"; elScript.src = script.includes('/') ? ("res/" + script + ".js") : ("res/scriptcalls." + script + ".js"); params = (params ? params : null); if (params) { $(elScript).attr("id", ("jsAtt-" + script)).attr("data-params", params) } $(elScript).one("load", function () { isLoaded = true }); $(elScript).load(); while (!isLoaded) { if ($(elScript).prop("complete")) { isLoaded = true } } head0.appendChild(elScript) }; if (post) { addLoadEvent(function () { attachScript() }) } else { attachScript() } } else { try { eval(script) } catch (ex) { } } } if (HAS_ONLOAD_HAPPENED) { window.onload() } };
 //]]></script>
     <script type="text/javascript" language="javascript">//<![CDATA[
         var CSSS_NOJS = 'nojs';
@@ -184,9 +184,9 @@ canvas#cnv1{display:inline-block;vertical-align:baseline;float:none !important;m
     
 <script type="text/javascript" src="res/js.lib.validations.js"></script>
 <script type="text/javascript" language="javascript">//<![CDATA[
-try{preload(['bg.slide-1.jpg', 'bg.slide-2.jpg']);}catch(ex){ ;}
-window.addLoadEvent('fx.actuator', null);
-window.addLoadEvent('home1', null);
+try{preload(['home/bg.slide-1.jpg', 'home/bg.slide-2.jpg']);}catch(ex){ ;}
+window.addLoadEvent('home/scriptcalls.fx.actuator', null);
+window.addLoadEvent('home/scriptcalls.home1', null);
 
 window.addLoadEvent(function(){
 													var resizeCanvas=function(){
