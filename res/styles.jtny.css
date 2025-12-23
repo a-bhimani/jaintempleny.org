@@ -192,7 +192,8 @@ div#content_wrap ul#slide_contents>li.active{display:block !important;}
 
 ul#slide_contents li h5, ul#slide_contents li h5.quattro{max-width:650px;margin-bottom:0.7em;}
 ul#slide_contents li p.head{padding:4% 0 40px 0;font-size:2em !important;font-weight:bold !important;}
-ul#slide_contents li p.summary{margin-bottom:30px;font-size:1.2em !important;color:#787676;line-height:1.3 !important;}
+ul#slide_contents li p.summary{margin-bottom:30px;font-size:1.2em !important;color:#787676;line-height:1.3 !important;text-align:center;}
+ul#slide_contents li .slideText{position:relative;left:2%;}
 
 /* Color utility classes */
 .color-purple{color:#29166f !important;}

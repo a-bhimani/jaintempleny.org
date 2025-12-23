@@ -129,15 +129,24 @@ Dot_f.prototype = {
         hasInitialized = true;
     },
 
-    // Draw all dots
+    // Draw all dots (rice-shaped ellipses)
     paint: function() {
         for (var i = 0; i < G_DOTS.length; i++) {
             var dot = G_DOTS[i];
+            CTX.save();
+            CTX.translate(dot[0], dot[1]);
+            // Use stored rotation or generate one
+            if (dot[10] === undefined) {
+                dot[10] = Math.random() * Math.PI; // Random rotation 0 to 180 degrees
+            }
+            CTX.rotate(dot[10]);
             CTX.beginPath();
-            CTX.arc(dot[0], dot[1], 2.8, 0, 2 * Math.PI, false);
+            // Rice shape: elongated ellipse (radiusX=3.5, radiusY=1.2)
+            CTX.ellipse(0, 0, 3.5, 1.2, 0, 0, 2 * Math.PI);
             CTX.fillStyle = dot[4];
             CTX.closePath();
             CTX.fill();
+            CTX.restore();
         }
     },
 
