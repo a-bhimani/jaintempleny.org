@@ -48,6 +48,8 @@ var Dot_f = function() {
 Dot_f.prototype = {
     special: 0,
     hasInitialized: false,
+    dotColor: "#009431",      // Default dot color (green)
+    lineColor: "#b3b3b3",     // Default line color (light gray)
 
     /**
      * Initialize dots - creates points in spiral pattern radiating from center
@@ -55,12 +57,15 @@ Dot_f.prototype = {
      * @param {number|Array} radius - Starting radius or array of predefined points
      * @param {number} radiusFactor - Factor to reduce radius each iteration
      * @param {Array} offsets - Random offset values
-     * @param {number} minX - Minimum X for color zone
-     * @param {number} maxX - Maximum X for color zone
-     * @param {boolean} showDebug - Whether to draw debug points
+     * @param {string} color - Color for dots (hex color like "#009431")
+     * @param {string} lineColor - Color for connection lines (optional, defaults to light gray)
      */
-    init: function(dotCount, radius, radiusFactor, offsets, minX, maxX, showDebug) {
+    init: function(dotCount, radius, radiusFactor, offsets, color, lineColor) {
         var points = [];
+        
+        // Set colors
+        this.dotColor = color || "#009431";
+        this.lineColor = lineColor || "#b3b3b3";
         
         if (radius instanceof Array) {
             points = radius;
@@ -76,15 +81,6 @@ Dot_f.prototype = {
                     
                     points.push([x, y]);
                     
-                    // Debug: draw initial points
-                    if (showDebug) {
-                        CTX.beginPath();
-                        CTX.arc(x, y, 3, 0, 2 * Math.PI, false);
-                        CTX.fillStyle = "black";
-                        CTX.closePath();
-                        CTX.fill();
-                    }
-                    
                     if (radius < this.factor) break;
                 }
                 m *= radiusFactor;
@@ -95,7 +91,6 @@ Dot_f.prototype = {
         // Create dot objects from points
         for (var i = 0; dotCount > i && i < points.length; i++) {
             var point, dotData = [];
-            var color = "#f17f4a";  // Orange color
             var lineWidth = null;
 
             if (this.special > 0) {
@@ -126,17 +121,8 @@ Dot_f.prototype = {
                            (point[1] <= 0 ? this.D : point[1]);
             }
 
-            // Color based on X position
-            if (maxX > minX) {
-                if (point[0] < minX) {
-                    color = "#69787D";  // Gray
-                } else if (point[0] < maxX) {
-                    color = randomizer(["#69787D", "#f17f4a"]);
-                }
-            }
-
             // Dot data: [startX, startY, targetX, targetY, color, speed, isMoving, connections, lineWidth]
-            dotData.push(this.OX, this.OY, point[0], point[1], color, 
+            dotData.push(this.OX, this.OY, point[0], point[1], this.dotColor, 
                         randomizerMinMax(0.6, 3.6, 0.1), true, randomizer([2, 3]), lineWidth);
             G_DOTS.push(dotData);
         }
@@ -212,6 +198,7 @@ Dot_f.prototype = {
 
     // Draw connection lines between dots
     drawConnections: function(skip) {
+        var self = this;
         if (this.special > 0) {
             // Draw sequential connections (for outline shapes)
             for (var i = G_DOTS.length - 1; i > G_DOTS.length - 1 - (this.special - 1); i--) {
@@ -221,7 +208,7 @@ Dot_f.prototype = {
                 CTX.moveTo(dot[0], dot[1]);
                 CTX.lineTo(prevDot[0], prevDot[1]);
                 CTX.lineWidth = dot[8];
-                CTX.strokeStyle = "#b3b3b3";  // Light gray
+                CTX.strokeStyle = self.lineColor;
                 CTX.stroke();
                 CTX.closePath();
             }
@@ -235,7 +222,7 @@ Dot_f.prototype = {
                     CTX.moveTo(dot[0], dot[1]);
                     CTX.lineTo(dot[9][j][0], dot[9][j][1]);
                     CTX.lineWidth = dot[8];
-                    CTX.strokeStyle = "#b3b3b3";
+                    CTX.strokeStyle = self.lineColor;
                     CTX.stroke();
                     CTX.closePath();
                 }
