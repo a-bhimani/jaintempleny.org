@@ -64,19 +64,19 @@ canvas#cnv1{display:inline-block;vertical-align:baseline;float:none !important;m
 <div id="slideshow">
 <ul id="slide_contents" class="nojs">
 	<li id="1" class="active" data-mbg-img="home/bg.slide.swastika.jpg">
-		<p class="summary"><strong class="color-red">अहिंसा | Ahimsa</strong> — Compassion for all living beings</p>
-		<p class="summary"><strong class="color-red">सत्य | Satya</strong> — Speak truth with kindness</p>
-		<p class="summary"><strong class="color-green">अस्तेय | Asteya</strong> — Take nothing that is not given</p>
-		<p class="summary"><strong class="color-green">ब्रह्मचर्य | Brahmacharya</strong> — Purity of mind and conduct</p>
-		<p class="summary"><strong class="color-purple">अपरिग्रह | Aparigraha</strong> — Detach from material desires</p>
+		<p class="summary"><strong class="color-red">अहिंसा | Ahimsa</strong><br>Compassion for all living beings</p>
+		<p class="summary"><strong class="color-red">सत्य | Satya</strong><br>Speak truth with kindness</p>
+		<p class="summary"><strong class="color-green">अस्तेय | Asteya</strong><br>Take nothing that is not given</p>
+		<p class="summary"><strong class="color-green">ब्रह्मचर्य | Brahmacharya</strong><br>Purity of mind and conduct</p>
+		<p class="summary"><strong class="color-purple">अपरिग्रह | Aparigraha</strong><br>Detach from material desires</p>
 		<div id="cnvFrame"><canvas id="cnv1" width="800" height="600"></canvas></div>
 	</li>
-	<li id="2" data-mbg-img="home/bg.slide.2.jpg">
-		<p class="summary"><strong class="color-red">णमो अरिहंताणं | Namo Arihantanam</strong> — I bow to the Arihantas</p>
-		<p class="summary"><strong class="color-red">णमो सिद्धाणं | Namo Siddhanam</strong> — I bow to the Siddhas</p>
-		<p class="summary"><strong class="color-green">णमो आयरियाणं | Namo Ayariyanam</strong> — I bow to the Acharyas</p>
-		<p class="summary"><strong class="color-green">णमो उवज्झायाणं | Namo Uvajjhayanam</strong> — I bow to the Upadhyayas</p>
-		<p class="summary"><strong class="color-purple">णमो लोए सव्व साहूणं | Namo Loe Savva Sahunam</strong> — I bow to all the Sadhus</p>
+	<li id="2" data-mbg-img="home/bg.slide.gavli-1.jpg">
+		<p class="summary"><strong class="color-red">णमो अरिहंताणं | Namo Arihantanam</strong><br>I bow to the Arihantas</p>
+		<p class="summary"><strong class="color-red">णमो सिद्धाणं | Namo Siddhanam</strong><br>I bow to the Siddhas</p>
+		<p class="summary"><strong class="color-green">णमो आयरियाणं | Namo Ayariyanam</strong><br>I bow to the Acharyas</p>
+		<p class="summary"><strong class="color-green">णमो उवज्झायाणं | Namo Uvajjhayanam</strong><br>I bow to the Upadhyayas</p>
+		<p class="summary"><strong class="color-purple">णमो लोए सव्व साहूणं | Namo Loe Savva Sahunam</strong><br>I bow to all the Sadhus</p>
 	</li>
 </ul>
 <li style="display:block !important;">
@@ -185,7 +185,7 @@ canvas#cnv1{display:inline-block;vertical-align:baseline;float:none !important;m
     
 <script type="text/javascript" src="res/js.lib.validations.js"></script>
 <script type="text/javascript" language="javascript">//<![CDATA[
-try{preload(['home/bg.slide.swastika.jpg', 'home/bg.slide.gavli-1.jpg', 'home/bg.slide.2.jpg']);}catch(ex){ ;}
+try{preload(['home/bg.slide.swastika.jpg', 'home/bg.slide.gavli-1.jpg', 'home/bg.slide.gavli-2.jpg']);}catch(ex){ ;}
 window.addLoadEvent('home/scriptcalls.fx.actuator', null);
 window.addLoadEvent('home/scriptcalls.home1', null);
 
@@ -213,10 +213,15 @@ var animations=[
     {points:gavli1Points, bg:"res/home/bg.slide.gavli-1.jpg", color:"#8b7cb8", colorLight:"#f0eef8"},
     {points:gavli2Points, bg:"res/home/bg.slide.gavli-2.jpg", color:"#e07070", colorLight:"#fceeee"}
 ];
-var selected=animations[Math.floor(Math.random()*animations.length)];
+// Shuffle and assign backgrounds to slides
+animations.sort(function(){return Math.random()-0.5;});
+var selected=animations[0];
 document.body.style.backgroundImage="url('"+selected.bg+"')";
-// Update slide 1's data attribute so slideshow stays consistent
-document.addEventListener('DOMContentLoaded',function(){var s=document.getElementById('1');if(s)s.setAttribute('data-mbg-img',selected.bg.replace('res/',''));});
+document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('#slide_contents > li').forEach(function(s,i){
+        s.setAttribute('data-mbg-img',animations[i%animations.length].bg.replace('res/',''));
+    });
+});
 
 window.addLoadEvent(function() {
     var dots = new Dot_f;
