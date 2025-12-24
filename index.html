@@ -4,11 +4,6 @@
 <html lang="en-GB">
 <head id="Head1"><meta charset="UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Jain Temple of New York (JTNY) - A spiritual home for the Jain community in New York. Visit us for darshan, religious programs, and community events." />
-    <!--Project: iKenPersonics.com
-	Created: Sunday, 01 March, 2015
-	Developer: Ankit Bhimani
-	Email: ankit@ankitbhimani.in
--->
     <title>
 	Jain Temple of New York &mdash; Home
 </title><link rel="shortcut icon" type="image/svg+xml" href="res/jtny.favicon.svg" /><link rel="stylesheet" type="text/css" media="all" href="res/styles.jtny.css" />
@@ -114,7 +109,7 @@ canvas#cnv1{display:inline-block;vertical-align:baseline;float:none !important;m
     </div>
     <div id="wrapper_head">
         <div id="logo_wrap">
-            <div id="logo_iken" class="logo" title="Go to Homepage"><a href="index.html" accesskey="h" class="logo spread" aria-label="Go to Homepage"></a></div>
+            <div id="logo_jtny" class="logo" title="Go to Homepage"><a href="index.html" accesskey="h" class="logo spread" aria-label="Go to Homepage"></a></div>
         </div>
     </div>
     <div id="wrapper_menu" class="wrap_menu nojs quattro">
@@ -190,7 +185,7 @@ window.addLoadEvent('home/scriptcalls.fx.actuator', null);
 window.addLoadEvent('home/scriptcalls.home1', null);
 
 window.addLoadEvent(function(){
-	var resizeCanvas=function(){
+													var resizeCanvas=function(){
 		// Batch reads first to avoid forced reflow
 		var canv=$(CANV), cnvFrame=canv.parent('div#cnvFrame');
 		var slideshow=$('div#slideshow'), contentWrap=$('div#content_wrap');
@@ -199,10 +194,10 @@ window.addLoadEvent(function(){
 		// Then batch writes
 		canv.css('margin-top', (frameHeight-cnvHeight)/2);
 		setTimeout(function(){slideshow.css({marginTop:((cwHeight-ssHeight)*0.4)});}, TOUT_LOAD);
-	}
-	window.addEventListener('resize', resizeCanvas, false);
-	window.addEventListener('load', resizeCanvas, false);
-}, null);
+																							}
+													window.addEventListener('resize', resizeCanvas, false);
+													window.addEventListener('load', resizeCanvas, false);
+												}, null);
 //]]></script>
 <script type="text/javascript" language="javascript">//<![CDATA[
 // Inline coordinates extracted from background images (strict filtering, small jitter)

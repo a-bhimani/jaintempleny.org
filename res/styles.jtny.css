@@ -21,9 +21,9 @@ a.placeholder:hover{color:#666 !important;}
 
 /* MAIN - HEAD */
 div#wrapper_head div#logo_wrap{position:relative !important;float:none;width:283px !important;height:89px !important;}
-div#wrapper_head div#logo_wrap div#logo_iken{position:absolute !important;float:left;width:100%;height:89px !important;background:url('jtny.logo.png') 0 center no-repeat !important;background-size:contain !important;}
-div#wrapper_head div#logo_wrap div#logo_iken a.spread{top:0;background:none 0 0 no-repeat !important;border:0 none !important;z-index:900;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";}
-div#wrapper_head div#logo_wrap div#logo_iken a.spread:hover{opacity:1;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";}
+div#wrapper_head div#logo_wrap div#logo_jtny{position:absolute !important;float:left;width:100%;height:89px !important;background:url('jtny.logo.png') 0 center no-repeat !important;background-size:contain !important;}
+div#wrapper_head div#logo_wrap div#logo_jtny a.spread{top:0;background:none 0 0 no-repeat !important;border:0 none !important;z-index:900;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";}
+div#wrapper_head div#logo_wrap div#logo_jtny a.spread:hover{opacity:1;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";}
 
 
 /* MENU - GENERICS */
@@ -305,9 +305,9 @@ div#mdl_Download table.seamless div#msgBox{display:none !important;}
 
 @media (max-width:400px){
 	iframe{width:280px !important;height:158px !important;}
-	div#wrapper_head div#logo_wrap div#logo_iken{cursor:default !important;}
-	div#wrapper_head div#logo_wrap div#logo_iken a.spread{margin:6px 0 0 11px !important;width:72px;height:72px;}
-	div#wrapper_head div#logo_wrap div#logo_iken a.spread:hover{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAiJJREFUeNp8VMmqIkEQTLXd1xH04HL2JApuB8GLyz/6J4LbSUEHBC8i6EHRiyI+BTdwGyPfy6ZbfJNQVVR1VVRkRlQbqtXqXyL682o3eovn80mPx4NHo9HI7UMor/aFzvdqfgGSgwaDgcd4PE4ej4cGgwGdTidSFOUT0BPd/QeEgex2O1ksFjocDpRMJimTyfBuv99PjUbjN7C7ugImZrOZisUiBQIB2u/3PEpEIhEql8tUr9fpfD6TyWTSIemSRg3cbjdZrVYKBoOcnjbC4TCVSiVmfb/fPwNJYdG0sVgsaDQa8XctM4Ddbjc9kBQ4kUiQ1+tVP06nU6rVatRsNqnT6ahgwszhcKhgKqNcLkfpdFqVGCCtVos3ovjD4VAHJsycTicTMSLXVCrFTWIymVC73eY6oKioFZQSMGEBZvl8/ttnWPD5fCoINsEz1+tVpwzAMEe91uu1ug6P8UXoer0eXS4XcrlcFAqFOD2tYmAmYkBRxGq1ot1uR+Px+NuVOATzIRWAgK4WBIej0SjFYjHabrfMCGdmsxl1u12y2WzMVBH/wIzvjgULbMpms+wrxGaz4fSxjjOS/sdXiFTEU2CnfayYv3tNHpyOAVhB0uPxyACimnxHjWDGX4FwCDVYLpdUqVSYvvwFYDxhUygUWJj5fK5TFUCYsXqQHCbErwO3SgqimqQJn0G1n5oyBrodLoOFsAm39ft9+l+IQTVkdv8EGACegR7T4D+rSAAAAABJRU5ErkJggg==') 0 0 no-repeat !important;}
+	div#wrapper_head div#logo_wrap div#logo_jtny{cursor:default !important;}
+	div#wrapper_head div#logo_wrap div#logo_jtny a.spread{margin:6px 0 0 11px !important;width:72px;height:72px;}
+	div#wrapper_head div#logo_wrap div#logo_jtny a.spread:hover{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAiJJREFUeNp8VMmqIkEQTLXd1xH04HL2JApuB8GLyz/6J4LbSUEHBC8i6EHRiyI+BTdwGyPfy6ZbfJNQVVR1VVRkRlQbqtXqXyL682o3eovn80mPx4NHo9HI7UMor/aFzvdqfgGSgwaDgcd4PE4ej4cGgwGdTidSFOUT0BPd/QeEgex2O1ksFjocDpRMJimTyfBuv99PjUbjN7C7ugImZrOZisUiBQIB2u/3PEpEIhEql8tUr9fpfD6TyWTSIemSRg3cbjdZrVYKBoOcnjbC4TCVSiVmfb/fPwNJYdG0sVgsaDQa8XctM4Ddbjc9kBQ4kUiQ1+tVP06nU6rVatRsNqnT6ahgwszhcKhgKqNcLkfpdFqVGCCtVos3ovjD4VAHJsycTicTMSLXVCrFTWIymVC73eY6oKioFZQSMGEBZvl8/ttnWPD5fCoINsEz1+tVpwzAMEe91uu1ug6P8UXoer0eXS4XcrlcFAqFOD2tYmAmYkBRxGq1ot1uR+Px+NuVOATzIRWAgK4WBIej0SjFYjHabrfMCGdmsxl1u12y2WzMVBH/wIzvjgULbMpms+wrxGaz4fSxjjOS/sdXiFTEU2CnfayYv3tNHpyOAVhB0uPxyACimnxHjWDGX4FwCDVYLpdUqVSYvvwFYDxhUygUWJj5fK5TFUCYsXqQHCbErwO3SgqimqQJn0G1n5oyBrodLoOFsAm39ft9+l+IQTVkdv8EGACegR7T4D+rSAAAAABJRU5ErkJggg==') 0 0 no-repeat !important;}
 
 	/* div#content_wrap ul.listed_icons li{background-position:0 center !important;background-size:75% auto !important;} */
 }
