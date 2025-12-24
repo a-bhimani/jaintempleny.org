@@ -129,7 +129,7 @@ Dot_f.prototype = {
         hasInitialized = true;
     },
 
-    // Draw all dots (optimized circles for performance)
+    // Draw all dots (rice-shaped ellipses, optimized with batching)
     paint: function() {
         // Batch dots by color for better performance
         var dotsByColor = {};
@@ -137,20 +137,27 @@ Dot_f.prototype = {
             var dot = G_DOTS[i];
             var color = dot[4];
             if (!dotsByColor[color]) dotsByColor[color] = [];
+            // Store rotation if not set
+            if (dot[10] === undefined) {
+                dot[10] = Math.random() * Math.PI;
+            }
             dotsByColor[color].push(dot);
         }
         
-        // Draw each color batch in a single path
+        // Draw each color batch
         for (var color in dotsByColor) {
-            CTX.beginPath();
             CTX.fillStyle = color;
             var dots = dotsByColor[color];
             for (var i = 0; i < dots.length; i++) {
                 var dot = dots[i];
-                CTX.moveTo(dot[0] + 2.5, dot[1]);
-                CTX.arc(dot[0], dot[1], 2.5, 0, 2 * Math.PI);
+                CTX.save();
+                CTX.translate(dot[0], dot[1]);
+                CTX.rotate(dot[10]);
+                CTX.beginPath();
+                CTX.ellipse(0, 0, 3.5, 1.2, 0, 0, 2 * Math.PI);
+                CTX.fill();
+                CTX.restore();
             }
-            CTX.fill();
         }
     },
 
